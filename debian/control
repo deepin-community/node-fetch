@@ -1,0 +1,30 @@
+Source: node-fetch
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends:
+ debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-babel-preset-env (>= 7)
+ , node-is-builtin-module
+ , node-rollup-plugin-babel (>= 5.2~)
+ , rollup
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-fetch
+Vcs-Git: https://salsa.debian.org/js-team/node-fetch.git
+Homepage: https://github.com/bitinn/node-fetch
+Rules-Requires-Root: no
+
+Package: node-fetch
+Architecture: all
+Depends:
+ ${misc:Depends}
+Provides: node-node-fetch
+Description: light-weight module that brings window.fetch to node.js
+ Instead of implementing XMLHttpRequest in Node.js to run browser-specific
+ Fetch polyfill, why not go from native http to Fetch API directly? Hence
+ node-fetch, minimal code for a window.fetch compatible API on Node.js runtime.
+ .
+ Node.js is an event-based server-side JavaScript engine.

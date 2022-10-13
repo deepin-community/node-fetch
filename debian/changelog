@@ -1,0 +1,76 @@
+node-fetch (2.6.1-6) unstable; urgency=medium
+
+  * team upload
+  * Update standards version to 4.6.0, no changes needed
+  * Fix GitHub tags regex
+  * Fix filenamemangle
+
+ -- Yadd <yadd@debian.org>  Fri, 12 Nov 2021 11:09:47 +0100
+
+node-fetch (2.6.1-5) unstable; urgency=medium
+
+  * Team upload
+  * Update build dependency to node-babel-preset-env (require ≥ 7)
+  * Modernize debian/watch
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 06 Jan 2021 22:39:49 +0100
+
+node-fetch (2.6.1-4) unstable; urgency=medium
+
+  * Drop legacy rollup-plugin-babel usage
+  * Bump Standards-Version to 4.5.1 (no changes needed)
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 02 Jan 2021 14:18:40 +0530
+
+node-fetch (2.6.1-3) unstable; urgency=medium
+
+  * Team upload
+  * Add test that shows #973170 problem
+  * Fix default export (Closes: #973170)
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 29 Oct 2020 12:43:47 +0100
+
+node-fetch (2.6.1-2) unstable; urgency=medium
+
+  * Team upload
+  * Upload to unstable
+  * d/control: Use dh-sequence-nodejs instead of pkg-js-tools
+
+ -- Nicolas Mora <babelouest@debian.org>  Thu, 08 Oct 2020 18:57:38 -0400
+
+node-fetch (2.6.1-1) experimental; urgency=medium
+
+  * Team upload
+  * New upstream version (Closes: #970173)
+
+ -- Nicolas Mora <babelouest@debian.org>  Sat, 12 Sep 2020 10:51:05 -0400
+
+node-fetch (2.6.0-1) experimental; urgency=medium
+
+  * Team upload
+  * New upstream version
+  * d/control: upgrade debhelper-compat version to 13
+  * d/patches/babelrc.patch: fix babel configuration
+
+ -- Nicolas Mora <babelouest@debian.org>  Sun, 30 Aug 2020 10:33:30 -0400
+
+node-fetch (1.7.3-2) unstable; urgency=medium
+
+  * Team upload
+  * Bump debhelper compatibility level to 12
+  * Declare compliance with policy 4.5.0
+  * Add "Rules-Requires-Root: no"
+  * Add debian/gbp.conf
+  * Add upstream/metadata
+  * Use pkg-js-tools
+  * Update VCS fields to salsa
+  * Drop unneeded version constraints from (build) dependencies
+  * Add "Provides: node-node-fetch"
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 22 Feb 2020 14:21:18 +0100
+
+node-fetch (1.7.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #886269)
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 03 Jan 2018 22:16:04 +0530
