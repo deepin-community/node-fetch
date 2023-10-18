@@ -1,0 +1,3 @@
+Test-Command: cd / && node -e 'require("node-fetch")'
+Depends: @, nodejs
+Features: test-name=commonjs

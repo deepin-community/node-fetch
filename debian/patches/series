@@ -1,3 +1,5 @@
-babelrc.patch
-fix-default-export.diff
-drop-legacy-rollup-babel-plugin.patch
+drop-rollup-plugin-strip.patch
+export-commonjs.patch
+fix-test.patch
+fix-typescript-declarations.patch
+drop-network-test.patch

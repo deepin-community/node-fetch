@@ -2,4 +2,30 @@ version=4
 opts=\
 dversionmangle=auto,\
 filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-fetch-$1/ \
- https://github.com/bitinn/node-fetch/tags .*/archive/.*/v?([\d\.]+).tar.gz
+ https://github.com/bitinn/node-fetch/tags .*/archive/.*/v?([\d\.]+).tar.gz group
+
+opts=\
+component=fetch-blob,\
+ctype=nodejs,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-fetch-blob-$1/ \
+ https://github.com/node-fetch/fetch-blob/tags .*/archive.*/v?([\d\.]+).tar.gz checksum
+
+opts=\
+component=formdata-polyfill,\
+ctype=nodejs,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-FormData-$1/ \
+ https://github.com/jimmywarting/FormData/tags .*/archive.*/v?([\d\.]+).tar.gz checksum
+
+# It is not recommended use npmregistry. Please investigate more.
+# Take a look at https://wiki.debian.org/debian/watch/
+opts="searchmode=plain,component=node-domexception,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-node-domexception-$1/" \
+ https://registry.npmjs.org/node-domexception https://registry.npmjs.org/node-domexception/-/node-domexception-([\d\.]+)@ARCHIVE_EXT@ checksum
+
+opts=\
+component=web-streams-polyfill,\
+ctype=nodejs,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-web-streams-polyfill-$1/ \
+ https://github.com/MattiasBuelens/web-streams-polyfill/tags .*/archive.*/v?([\d\.]+).tar.gz checksum

@@ -1,1 +1,1 @@
-node -e 'require("./lib/index")("http://localhost").then(()=>{console.log("open")}).catch((e)=>{console.log("Connection refused")})'
+mocha

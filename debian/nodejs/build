@@ -1,1 +1,8 @@
-BABEL_ENV=rollup rollup -c
+rollup -c debian/rollup.config.js
+perl -i -pe 's/node://' cjs/index.js
+for i in cjs/*; do
+	mv $i ${i%.js}.cjs
+	n=`basename $i`
+	perl -i -pe "s/$n/"${n%.js}.cjs'/' cjs/*
+done
+cp debian/index.cjs .

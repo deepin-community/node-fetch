@@ -1,27 +1,42 @@
 Source: node-fetch
+Section: javascript
+Priority: optional
 Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
 Uploaders: Pirate Praveen <praveen@debian.org>
-Section: javascript
-Testsuite: autopkgtest-pkg-nodejs
-Priority: optional
-Build-Depends:
- debhelper-compat (= 13)
+Build-Depends: debhelper-compat (= 13)
  , dh-sequence-nodejs
- , node-babel-preset-env (>= 7)
- , node-is-builtin-module
- , node-rollup-plugin-babel (>= 5.2~)
+ , chai <!nocheck>
+ , mocha <!nocheck>
+ , node-busboy <!nocheck>
+ , node-chai-as-promised <!nocheck>
+ , node-coveralls <!nocheck>
+ , node-data-uri-to-buffer
+ , node-form-data <!nocheck>
+ , node-p-timeout <!nocheck>
+ , node-rollup-plugin-commonjs
+ , node-rollup-plugin-inject
+ , node-rollup-plugin-node-resolve
+ , node-rollup-plugin-replace
+ , node-rollup-plugin-terser
+ , node-rollup-plugin-typescript
+ , node-streamsearch <!nocheck>
+ , node-tslib
+ , node-typescript
  , rollup
-Standards-Version: 4.6.0
+ , terser
+Standards-Version: 4.6.1
 Vcs-Browser: https://salsa.debian.org/js-team/node-fetch
 Vcs-Git: https://salsa.debian.org/js-team/node-fetch.git
 Homepage: https://github.com/bitinn/node-fetch
+Testsuite: autopkgtest-pkg-nodejs
 Rules-Requires-Root: no
 
 Package: node-fetch
 Architecture: all
-Depends:
- ${misc:Depends}
-Provides: node-node-fetch
+Depends: ${misc:Depends}
+ , node-data-uri-to-buffer
+Provides: ${nodejs:Provides}
+Multi-Arch: foreign
 Description: light-weight module that brings window.fetch to node.js
  Instead of implementing XMLHttpRequest in Node.js to run browser-specific
  Fetch polyfill, why not go from native http to Fetch API directly? Hence

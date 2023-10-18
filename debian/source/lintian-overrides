@@ -1,0 +1,14 @@
+# Generic types-* path
+add-component-copyright types-*
+
+# Doc
+very-long-line-length-in-source-file *.md*
+very-long-line-length-in-source-file *docs/media/NodeFetch.sketch*
+
+# Test files
+source-contains-prebuilt-javascript-object [*debian/tests/test_modules/*]
+very-long-line-length-in-source-file *debian/tests/test_modules/*
+
+# Readable file
+source-is-missing [*formdata-polyfill/esm.min.js*]
+source-contains-prebuilt-javascript-object [*formdata-polyfill/esm.min.js*]

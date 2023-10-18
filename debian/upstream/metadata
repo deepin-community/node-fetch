@@ -1,7 +1,8 @@
 ---
 Archive: GitHub
-Bug-Database: https://github.com/bitinn/node-fetch/issues
-Bug-Submit: https://github.com/bitinn/node-fetch/issues/new
+Bug-Database: https://github.com/node-fetch/node-fetch/issues
+Bug-Submit: https://github.com/node-fetch/node-fetch/issues/new
 Changelog: https://github.com/bitinn/node-fetch/tags
 Repository: https://github.com/bitinn/node-fetch.git
-Repository-Browse: https://github.com/bitinn/node-fetch
+Repository-Browse: https://github.com/node-fetch/node-fetch
+Security-Contact: https://github.com/bitinn/node-fetch/tree/HEAD/SECURITY.md
