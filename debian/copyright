@@ -2,13 +2,38 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: node-fetch
 Upstream-Contact: https://github.com/bitinn/node-fetch/issues
 Source: https://github.com/bitinn/node-fetch
+ https://registry.npmjs.org/@types/node-fetch
+ https://github.com/node-fetch/fetch-blob/tags
+ https://github.com/jimmywarting/FormData/tags
+ https://registry.npmjs.org/node-domexception
+ https://github.com/MattiasBuelens/web-streams-polyfill/tags
+Files-Excluded-formdata-polyfill: formdata.min.js
 
 Files: *
-Copyright: 2016, David Frank
+Copyright: 2016-2020 Node Fetch Team
 License: Expat
 
 Files: debian/*
-Copyright: 2018, Pirate Praveen <praveen@debian.org>
+Copyright: 2018 Pirate Praveen <praveen@debian.org>
+ 2022 Yadd <yadd@debian.org>
+License: Expat
+
+Files: fetch-blob/*
+Copyright: 2019 David Frank
+License: Expat
+
+Files: formdata-polyfill/*
+ node-domexception/*
+Copyright: 2016 Jimmy Karl Roland Wärting
+License: Expat
+
+Files: types-*/*
+Copyright: Microsoft Corporation
+License: Expat
+
+Files: web-streams-polyfill/*
+Copyright: 2020 Mattias Buelens
+ 2016 Diwank Singh Tomer
 License: Expat
 
 License: Expat

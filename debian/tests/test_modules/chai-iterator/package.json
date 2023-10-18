@@ -1,0 +1,70 @@
+{
+  "name": "chai-iterator",
+  "version": "3.0.2",
+  "description": "Chai assertions for iterable objects",
+  "main": "chai-iterator.js",
+  "scripts": {
+    "test:lint": "xo",
+    "test:mocha": "mocha test/**/*.js",
+    "test:cover": "nyc npm run test:mocha",
+    "test": "npm run test:lint && npm run test:cover",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "files": [
+    "chai-iterator.js",
+    "LICENSE",
+    "CHANGELOG.md",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harrysarson/chai-iterator.git"
+  },
+  "keywords": [
+    "chai",
+    "chai-plugin",
+    "browser",
+    "iterator",
+    "iterable",
+    "iteration",
+    "generator",
+    "yield",
+    "es6",
+    "es2015",
+    "typescript"
+  ],
+  "engines": {
+    "node": ">=6.0"
+  },
+  "author": "Harry Sarson <harry.sarson@hotmail.co.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/harrysarson/chai-iterator/issues"
+  },
+  "homepage": "https://github.com/harrysarson/chai-iterator",
+  "peerDependencies": {
+    "chai": "4.x"
+  },
+  "devDependencies": {
+    "chai": "4.1.2",
+    "coveralls": "3.0.2",
+    "mocha": "6.0.0",
+    "nyc": "13.3.0",
+    "xo": "0.24.0"
+  },
+  "xo": {
+    "esnext": false,
+    "globals": [
+      "chai",
+      "define",
+      "module"
+    ],
+    "env": [
+      "mocha"
+    ],
+    "rules": {
+      "no-unused-expressions": "off",
+      "no-use-extend-native/no-use-extend-native": "off"
+    }
+  }
+}

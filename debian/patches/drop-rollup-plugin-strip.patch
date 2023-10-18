@@ -1,0 +1,27 @@
+Description: drop @rollup/plugin-strip
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2022-05-02
+
+--- a/web-streams-polyfill/rollup.config.js
++++ b/web-streams-polyfill/rollup.config.js
+@@ -2,7 +2,6 @@
+ 
+ const typescript = require('@rollup/plugin-typescript');
+ const inject = require('@rollup/plugin-inject');
+-const strip = require('@rollup/plugin-strip');
+ const replace = require('@rollup/plugin-replace');
+ const { terser } = require('rollup-plugin-terser');
+ 
+@@ -76,11 +75,6 @@
+           DEBUG: debug
+         }
+       }),
+-      !debug ? strip({
+-        include: 'src/**/*.ts',
+-        functions: ['assert'],
+-        sourceMap: true
+-      }) : undefined,
+       minify ? terser({
+         keep_classnames: keepRegex, // needed for WPT
+         keep_fnames: keepRegex,

@@ -1,3 +1,146 @@
+node-fetch (3.3.0+~cs11.4.11-2) unstable; urgency=medium
+
+  [ Yadd ]
+  * Update lintian override info format in d/source/lintian-overrides on line 9, 13-14.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository-Browse.
+  * Apply multi-arch hints (foreign)
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sat, 17 Dec 2022 18:15:53 +0000
+
+node-fetch (3.3.0+~cs11.4.11-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 3.3.0+~cs11.4.11
+
+ -- Yadd <yadd@debian.org>  Sat, 19 Nov 2022 08:56:40 +0100
+
+node-fetch (3.2.10+repack2+~cs11.4.11-2) unstable; urgency=medium
+
+  * Team upload
+  * Drop test that require network
+
+ -- Yadd <yadd@debian.org>  Mon, 07 Nov 2022 18:06:15 +0100
+
+node-fetch (3.2.10+repack2+~cs11.4.11-1) unstable; urgency=medium
+
+  * Team upload
+  * Drop component @types/node-fetch: node-fetch has its own TS declarations
+
+ -- Yadd <yadd@debian.org>  Mon, 07 Nov 2022 16:40:57 +0100
+
+node-fetch (3.2.10+repack1+~cs14.4.14-4) unstable; urgency=medium
+
+  * Team upload
+  * Add fix for rollup 3 (Closes: #1022692)
+  * Fix commonJS (Closes: #1017606)
+  * Set upstream metadata fields: Security-Contact.
+  * Back to unstable
+
+ -- Yadd <yadd@debian.org>  Mon, 07 Nov 2022 14:10:43 +0100
+
+node-fetch (3.2.10+repack1+~cs14.4.14-3) experimental; urgency=medium
+
+  * Team upload
+  * Fix for recent @rollup/plugin-node-resolve (Closes: #1021536)
+
+ -- Yadd <yadd@debian.org>  Mon, 10 Oct 2022 17:50:40 +0200
+
+node-fetch (3.2.10+repack1+~cs14.4.14-2) experimental; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.6.1
+  * Fix commonjs files
+
+ -- Yadd <yadd@debian.org>  Tue, 02 Aug 2022 22:28:25 +0200
+
+node-fetch (3.2.10+repack1+~cs14.4.14-1) experimental; urgency=medium
+
+  * Team upload
+  * Build missing typescript files
+  * Replace component data-uri-to-buffer by dependency to
+    node-data-uri-to-buffer (Closes: #1016513)
+  * New upstream version 3.2.10+repack1+~cs14.4.14
+
+ -- Yadd <yadd@debian.org>  Tue, 02 Aug 2022 21:59:36 +0200
+
+node-fetch (3.2.10+~cs18.4.14-1) experimental; urgency=medium
+
+  * Team upload
+  * Drop some test modules, now available
+  * New upstream version 3.2.10+~cs18.4.14 (Closes: #1016497)
+  * Fix commonjs exports
+
+ -- Yadd <yadd@debian.org>  Tue, 02 Aug 2022 21:01:40 +0200
+
+node-fetch (3.2.9+~cs18.4.14-1) experimental; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.6.1
+  * New upstream version 3.2.9+~cs18.4.14
+  * Fix files excluded
+  * Drop 3 tests
+
+ -- Yadd <yadd@debian.org>  Thu, 28 Jul 2022 22:03:38 +0200
+
+node-fetch (3.2.4+~cs18.3.19-2) experimental; urgency=medium
+
+  * Team upload
+  * Fix test
+
+ -- Yadd <yadd@debian.org>  Mon, 02 May 2022 13:35:28 +0200
+
+node-fetch (3.2.4+~cs18.3.19-1) experimental; urgency=medium
+
+  * Team upload
+  * Embed data-uri-to-buffer fetch-blob formdata-polyfill node-domexception
+    and web-streams-polyfill
+  * New upstream version 3.2.4+~cs18.3.19
+  * Embed some little modules for test only
+  * Build components
+  * Build commonjs files
+  * Update copyright
+  * Update test (mocha now)
+
+ -- Yadd <yadd@debian.org>  Mon, 02 May 2022 12:25:01 +0200
+
+node-fetch (2.6.7+~2.6.1-2) unstable; urgency=medium
+
+  * Team upload
+  * Update standards version to 4.6.1, no changes needed.
+  * Add fix for rollup 3 (Closes: #1022692)
+
+ -- Yadd <yadd@debian.org>  Fri, 28 Oct 2022 14:33:08 +0200
+
+node-fetch (2.6.7+~2.6.1-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 2.6.7+~2.6.1, updates typescript declarations
+
+ -- Yadd <yadd@debian.org>  Thu, 03 Mar 2022 20:38:49 +0100
+
+node-fetch (2.6.7+~2.5.12-1) unstable; urgency=medium
+
+  * Team upload
+  * Embed typescript declarations and repack
+
+ -- Yadd <yadd@debian.org>  Sun, 06 Feb 2022 17:17:42 +0100
+
+node-fetch (2.6.7-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 2.6.7
+  * Refresh patches
+  * Add dependency to node-whatwg-url
+
+ -- Yadd <yadd@debian.org>  Sun, 06 Feb 2022 17:12:03 +0100
+
+node-fetch (2.6.1-7) unstable; urgency=medium
+
+  * Team upload
+  * Don't forward secure headers to 3th party (Closes: CVE-2022-0235)
+
+ -- Yadd <yadd@debian.org>  Wed, 19 Jan 2022 16:40:33 +0100
+
 node-fetch (2.6.1-6) unstable; urgency=medium
 
   * team upload

@@ -1,0 +1,1 @@
+tsc --declaration --emitDeclarationOnly --allowJs index.js from.js

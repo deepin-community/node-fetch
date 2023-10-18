@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "lib": [
+      "es5",
+      "es2015.promise"
+    ],
+    "newLine": "lf",
+    "types": [],
+    "strict": true,
+    "stripInternal": true,
+    "importHelpers": true,
+    "declaration": true,
+    "declarationMap": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@@target/*": [
+        "./target/es5/*"
+      ]
+    }
+  },
+  "include": [
+    "src/"
+  ]
+}

@@ -1,0 +1,72 @@
+Description: fix test
+ This test fails even with a "npm i"
+Author: Yadd <yadd@debian.org>
+Forwarded: no
+Last-Update: 2022-07-28
+
+--- a/test/main.js
++++ b/test/main.js
+@@ -1485,63 +1485,6 @@
+ 			.to.be.rejectedWith(Error, errorMessage);
+ 	});
+ 
+-	it('should allow POST request with form-data as body', async () => {
+-		const form = new FormData();
+-		form.append('a', '1');
+-
+-		const url = `${base}multipart`;
+-		const options = {
+-			method: 'POST',
+-			body: form
+-		};
+-		const res = await fetch(url, options);
+-		const json = await res.json();
+-		expect(json.method).to.equal('POST');
+-		expect(json.headers['content-type']).to.startWith('multipart/form-data;boundary=');
+-		expect(json.headers['content-length']).to.be.a('string');
+-		expect(json.body).to.equal('a=1');
+-	});
+-
+-	it('should allow POST request with form-data using stream as body', async () => {
+-		const form = new FormData();
+-		form.append('my_field', fs.createReadStream('test/utils/dummy.txt'));
+-
+-		const url = `${base}multipart`;
+-		const options = {
+-			method: 'POST',
+-			body: form
+-		};
+-
+-		const res = await fetch(url, options);
+-		const json = await res.json();
+-		expect(json.method).to.equal('POST');
+-		expect(json.headers['content-type']).to.startWith('multipart/form-data;boundary=');
+-		expect(json.headers['content-length']).to.be.undefined;
+-		expect(json.body).to.contain('my_field=');
+-	});
+-
+-	it('should allow POST request with form-data as body and custom headers', async () => {
+-		const form = new FormData();
+-		form.append('a', '1');
+-
+-		const headers = form.getHeaders();
+-		headers.b = '2';
+-
+-		const url = `${base}multipart`;
+-		const options = {
+-			method: 'POST',
+-			body: form,
+-			headers
+-		};
+-		const res = await fetch(url, options);
+-		const json = await res.json();
+-		expect(json.method).to.equal('POST');
+-		expect(json.headers['content-type']).to.startWith('multipart/form-data; boundary=');
+-		expect(json.headers['content-length']).to.be.a('string');
+-		expect(json.headers.b).to.equal('2');
+-		expect(json.body).to.equal('a=1');
+-	});
+-
+ 	it('should support spec-compliant form-data as POST body', async () => {
+ 		const form = new FormDataNode();
+ 

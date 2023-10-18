@@ -1,0 +1,86 @@
+Description: drop network tests
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2022-11-07
+
+--- a/test/main.js
++++ b/test/main.js
+@@ -482,6 +482,7 @@
+ 		expect(json.headers['x-custom-header']).to.equal('abc');
+ 	});
+ 
++  /*
+ 	it('should not forward secure headers to 3th party', async () => {
+ 		const res = await fetch(`${base}redirect-to/302/https://httpbin.org/get`, {
+ 			headers: new Headers({
+@@ -504,6 +505,7 @@
+ 		expect(headers.get('www-authenticate')).to.equal(null);
+ 		expect(headers.get('authorization')).to.equal(null);
+ 	});
++  */
+ 
+ 	it('should forward secure headers to same host', async () => {
+ 		const res = await fetch(`${base}redirect-to/302/${base}inspect`, {
+@@ -542,6 +544,7 @@
+ 		expect(isDomainOrSubdomain('http://bob.uk.com', 'http://xyz.uk.com')).to.be.false;
+ 	});
+ 
++  /*
+ 	it('should not forward secure headers to changed protocol', async () => {
+ 		const res = await fetch('https://httpbin.org/redirect-to?url=http%3A%2F%2Fhttpbin.org%2Fget&status_code=302', {
+ 			headers: new Headers({
+@@ -564,6 +567,7 @@
+ 		expect(headers.get('www-authenticate')).to.equal(null);
+ 		expect(headers.get('authorization')).to.equal(null);
+ 	});
++  */
+ 
+ 	it('isSameProtocol', () => {
+ 		// Forwarding headers to same protocol is OK
+@@ -575,6 +579,7 @@
+ 		expect(isSameProtocol('http://www.a.com', 'https://a.com')).to.be.false;
+ 	});
+ 
++  /*
+ 	it('should treat broken redirect as ordinary response (follow)', async () => {
+ 		const url = `${base}redirect/no-location`;
+ 		const res = await fetch(url);
+@@ -606,6 +611,7 @@
+ 		expect(res.headers.get('location')).to.equal('//super:invalid:url%/');
+ 		await res.arrayBuffer();
+ 	});
++  */
+ 
+ 	it('should throw an error on invalid redirect url', async () => {
+ 		const url = `${base}redirect/301/invalid`;
+@@ -789,12 +795,14 @@
+ 		expect(result).to.equal('foobar');
+ 	});
+ 
++  /*
+ 	it('should handle DNS-error response', () => {
+ 		const url = 'http://domain.invalid';
+ 		return expect(fetch(url)).to.eventually.be.rejected
+ 			.and.be.an.instanceOf(FetchError)
+ 			.and.have.property('code').that.matches(/ENOTFOUND|EAI_AGAIN/);
+ 	});
++  */
+ 
+ 	it('should reject invalid json response', async () => {
+ 		const url = `${base}error/json`;
+@@ -2077,6 +2085,7 @@
+ 		expect(err.stack).to.include('funcName').and.to.startWith(`${err.name}: ${err.message}`);
+ 	});
+ 
++  /*
+ 	it('should support https request', async function () {
+ 		this.timeout(5000);
+ 		const url = 'https://github.com/';
+@@ -2087,6 +2096,7 @@
+ 		expect(res.status).to.equal(200);
+ 		expect(res.ok).to.be.true;
+ 	});
++  */
+ 
+ 	// Issue #414
+ 	it('should reject if attempt to accumulate body stream throws', () => {

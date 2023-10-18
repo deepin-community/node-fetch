@@ -1,0 +1,17 @@
+busboy		test
+chai		test
+chai-as-promised	test
+coveralls	test
+data-uri-to-buffer	test
+form-data	test
+mocha		test
+p-timeout	test
+@rollup/plugin-commonjs
+@rollup/plugin-inject
+@rollup/plugin-node-resolve
+@rollup/plugin-replace
+@rollup/plugin-typescript
+rollup-plugin-terser
+streamsearch	test
+tslib
+@types/node

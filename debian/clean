@@ -1,0 +1,11 @@
+cjs/
+fetch-blob/index.cjs
+fetch-blob/*.cts
+fetch-blob/*.d.ts
+formdata-polyfill/formdata.cjs
+formdata-polyfill/formdata.min.js
+formdata-polyfill/esm.min.cjs
+index.cjs
+web-streams-polyfill/dist/
+web-streams-polyfill/lib/
+web-streams-polyfill/temp/
