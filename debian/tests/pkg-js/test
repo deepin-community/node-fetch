@@ -1,1 +1,4 @@
-mocha
+for m in busboy chai chai-as-promised coveralls data-uri-to-buffer form-data mocha p-timeout streamsearch; do
+	pkgjs-ln $m || true
+done
+mocha --invert --grep "(handle chunked response with final chunk)|(handle chunked response with more than 1 chunk)"

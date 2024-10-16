@@ -1,0 +1,15 @@
+Description: fix version
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2023-12-22
+
+--- a/package.json
++++ b/package.json
+@@ -1,6 +1,6 @@
+ {
+   "name": "node-fetch",
+-  "version": "3.1.1",
++  "version": "3.3.2",
+   "description": "A light-weight module that brings Fetch API to node.js",
+   "main": "./src/index.js",
+   "exports": {

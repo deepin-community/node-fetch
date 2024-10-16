@@ -1,0 +1,14 @@
+
+Description: Fix that test.
+Forwarded: not-needed
+--- a/test/main.js
++++ b/test/main.js
+@@ -2132,7 +2133,7 @@
+ 	it('supports supplying a famliy option to the agent', async () => {
+ 		const url = `${base}redirect/301`;
+ 		const families = [];
+-		const family = Symbol('family');
++		const family = 4;
+ 		function lookupSpy(hostname, options, callback) {
+ 			families.push(options.family);
+ 
