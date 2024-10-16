@@ -3,3 +3,6 @@ export-commonjs.patch
 fix-test.patch
 fix-typescript-declarations.patch
 drop-network-test.patch
+fix-version.patch
+fix-for-data-uri-to-buffer-6.patch
+family-option-test.patch

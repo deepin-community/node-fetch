@@ -1,7 +1,56 @@
+node-fetch (3.3.2+~cs11.4.11-3) unstable; urgency=medium
+
+  * Team upload
+  * patch family-option test and skip two failing questionnable tests.
+    Closes: #1071978
+
+  [ Yadd ]
+  * Declare compliance with policy 4.7.0
+
+ -- Jérémy Lal <kapouer@melix.org>  Tue, 28 May 2024 13:58:13 +0200
+
+node-fetch (3.3.2+~cs11.4.11-2) unstable; urgency=medium
+
+  * Team upload
+  * Add patch for node-data-uri-to-buffer >= 6
+
+ -- Yadd <yadd@debian.org>  Mon, 22 Apr 2024 13:00:30 +0400
+
+node-fetch (3.3.2+~cs11.4.11-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 3.3.2+~cs11.4.11
+  * Fix package.json version
+
+ -- Yadd <yadd@debian.org>  Fri, 22 Dec 2023 14:39:14 +0400
+
+node-fetch (3.3.0+~cs11.4.11-5) unstable; urgency=medium
+
+  * Team upload
+  * Source-only upload
+
+ -- Yadd <yadd@debian.org>  Sat, 25 Nov 2023 07:34:43 +0400
+
+node-fetch (3.3.0+~cs11.4.11-4) unstable; urgency=medium
+
+  * Team upload
+  * Test only during autopkgtest to avoid circular dependency
+
+ -- Yadd <yadd@debian.org>  Fri, 24 Nov 2023 06:37:30 +0400
+
+node-fetch (3.3.0+~cs11.4.11-3) unstable; urgency=medium
+
+  * Team upload
+  * Update standards version to 4.6.2, no changes needed.
+  * Add patch for node-data-uri-to-buffer >= 5
+
+ -- Yadd <yadd@debian.org>  Thu, 23 Nov 2023 10:57:00 +0400
+
 node-fetch (3.3.0+~cs11.4.11-2) unstable; urgency=medium
 
   [ Yadd ]
-  * Update lintian override info format in d/source/lintian-overrides on line 9, 13-14.
+  * Update lintian override info format in d/source/lintian-overrides on line 9,
+    13-14.
   * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository-Browse.
   * Apply multi-arch hints (foreign)
 
